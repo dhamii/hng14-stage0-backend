@@ -32,7 +32,7 @@ class ApiController extends Controller
 
         // 🚀 Call external API with error handling
         try {
-            $response = Http::timeout(5)->get('https://api.genderize.io', [
+            $response = Http::get('https://api.genderize.io', [
                 'name' => $name
             ]);
 
