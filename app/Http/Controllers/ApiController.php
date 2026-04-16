@@ -35,7 +35,7 @@ class ApiController extends Controller
             $response = Http::get('https://api.genderize.io', [
                 'name' => $name
             ]);
-            dd($response);
+            // dd($response);
             if (!$response->successful()) {
                 return response()->json([
                     'status' => 'error',
